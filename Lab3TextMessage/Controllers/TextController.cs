@@ -7,9 +7,9 @@ namespace Lab3TextMessage.Controllers
     public class TextController : Controller
     {
         
-        public ActionResult SentConfirmed()
+        public ActionResult SentConfirmed(TextMessage _Text)
         {
-            return View();
+            return View(_Text);
         }
 
         [HttpGet]
@@ -21,8 +21,14 @@ namespace Lab3TextMessage.Controllers
         [HttpPost]
         public ActionResult Send(TextMessage _Text)
         {
-            //Text1.TextContent = _Text.TextContent;
-            return RedirectToAction("Success");
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("SentConfirmed", _Text);
+            }
+            else
+            {
+                return View();
+            }
         }
 
         public ActionResult Success() 
