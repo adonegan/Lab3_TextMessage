@@ -17,7 +17,7 @@ namespace Lab3TextMessage.Controllers
         {
             return View();
         }
-
+        
         [HttpPost]
         public ActionResult Send(TextMessage _Text)
         {
@@ -30,13 +30,6 @@ namespace Lab3TextMessage.Controllers
                 return View();
             }
         }
-
-        public ActionResult Success() 
-        {
-            ViewBag.SuccessMessage = "Success! You've sent your text!";
-            return View();
-        }
-
-        
     }
+
 }
