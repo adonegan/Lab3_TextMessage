@@ -7,19 +7,19 @@ namespace Lab3TextMessage.Controllers
     public class TextController : Controller
     {
         
-        public ActionResult Display()
+        public ActionResult SentConfirmed()
         {
-            return View(Text1);
+            return View();
         }
 
         [HttpGet]
-        public ActionResult Edit()
+        public ActionResult Send()
         {
-            return View(Text1);
+            return View();
         }
 
         [HttpPost]
-        public ActionResult Edit(TextMessage _Text)
+        public ActionResult Send(TextMessage _Text)
         {
             //Text1.TextContent = _Text.TextContent;
             return RedirectToAction("Success");
