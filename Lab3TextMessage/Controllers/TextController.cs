@@ -6,7 +6,6 @@ namespace Lab3TextMessage.Controllers
 {
     public class TextController : Controller
     {
-        TextMessage Text1 = new TextMessage() {DestinationPhone="5555555555", TextContent=" " }; 
         
         public ActionResult Display()
         {
